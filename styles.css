@@ -1,0 +1,51 @@
+div {
+  border: 1px solid black;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  background-color: #1a1e1f;
+}
+
+.body {
+  width: 100%;
+  height: auto;
+}
+
+.one {
+  background-image: url("pictures/3.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.two {
+  background-color: rgb(43, 43, 43);
+
+}
+
+h1 {
+  color: #F4F4F4;
+  text-align: start;
+  line-height: 1.6em;
+  letter-spacing: normal;
+  font-size: 28px;
+}
+
+h3 {
+  color: rgb(244, 244, 244);
+  font-size: 42px;
+  margin-bottom: 0;
+
+}
+
+h4 {
+  margin-top: 0%;
+  color: rgb(244, 244, 244);
+  font-size: 34px;
+  line-height: 1.6em;
+}
+.footer {
+  background-color: #1a1e1f;
+
+}
