@@ -1,8 +1,8 @@
-body {}
-
-div {
-  /* border: 1px solid red; */
+body {
+  width: 100%; /* Default width */
+         
 }
+
 
 section {
   width: 100%;
@@ -15,6 +15,7 @@ section {
   align-items: center;
   height: 90px;
   width: 100%;
+  
   position: sticky;
   top: 0px;
   left: 0px;
@@ -113,17 +114,23 @@ section {
 .four {
   background-color: #2b2b2b;
   color: #F4F4F4;
+  width: auto;
+  height: auto;
 }
 
 .five {
   color: #F4F4F4;
+  padding-top: 20px;
+padding-bottom: 20px;
 }
 
-.five p {
-  font-size: 22px;
-  font-weight: bold;
-}
+li ul a {
+  text-decoration: none;
+  color:#F4F4F4;
+  font-size: 20px;
 
+}
+ 
 .frequently-asked-questions {
   display: flex;
   justify-content: space-around;
@@ -143,7 +150,9 @@ section {
 .frequently-asked-questions a:hover {
   color: #c0c0c0;
 }
-
+ul {
+  list-style-type: none;
+}
 h1 {
   color: #F4F4F4;
   text-align: start;
@@ -243,4 +252,29 @@ button:hover {
 
 .courses-grid div {
   flex-basis: 33.2%;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+  width: 100%;
+}
+.mySlides div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
 }
