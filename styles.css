@@ -1,6 +1,6 @@
 body {
   display: block;
-
+  margin: auto;
 }
 
 
@@ -176,6 +176,27 @@ section {
   font-size: 20px;
 }
 
+.hidden-content {
+  display: none;
+}
+
+.question {
+  cursor: pointer;
+  border-bottom: 1px solid #c0c0c063;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#content-1,
+#content-2,
+#content-3 {
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
 h1 {
   color: #F4F4F4;
   text-align: start;
@@ -187,7 +208,7 @@ h1 {
 h3 {
   color: rgb(244, 244, 244);
   font-size: 42px;
-  
+
 }
 
 h4 {

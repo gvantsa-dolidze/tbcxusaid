@@ -25,3 +25,23 @@ function showSlides() {
     
     setTimeout(showSlides, 2000); // Change slide every 2 seconds
 }
+
+var openContentId = null;
+
+    function toggleContent(questionNumber) {
+      var contentId = 'content-' + questionNumber;
+      var content = document.getElementById(contentId);
+
+      if (openContentId !== null) {
+        var openContent = document.getElementById(openContentId);
+        openContent.style.display = 'none';
+
+        if (openContentId === contentId) {
+          openContentId = null;
+          return;
+        }
+      }
+
+      content.style.display = 'block';
+      openContentId = contentId;
+    }
