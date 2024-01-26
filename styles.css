@@ -20,18 +20,21 @@ body {
   position: sticky;
   top: 0px;
   left: 0px;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.header div {
+.responsive-header {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-menu {
   display: flex;
   gap: 20px;
+  white-space: nowrap;
 }
 
 .header-logo {
@@ -163,9 +166,6 @@ body {
 
 .slideshow-container {
   font-size: 24px;
-}
-
-.slideshow-container {
   position: relative;
   margin: auto;
 }
@@ -265,10 +265,8 @@ h4 {
 .footer {
   background-color: #1a1e1f;
   color: #F4F4F4;
-  /* padding-top: 50px;
-  padding-bottom: 50px;
-  */
 }
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -277,17 +275,19 @@ h4 {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 .copyright {
   display: grid;
-gap: 15px;
+  gap: 15px;
 }
+
 .contact {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-end;
-  gap:38px;
+  gap: 38px;
 }
 
 .contact-img {
@@ -303,6 +303,7 @@ gap: 15px;
   text-decoration: none;
   transition: background-color 0.5s, color 0.5s;
 }
+
 .role:hover {
   color: #c0c0c0;
 }
@@ -334,30 +335,15 @@ button:hover {
   border-color: transparent;
 }
 
-
-
-
 /* End 'how-to' styles */
 
 @media (max-width: 950px) {
-
-  .header,
-  .five div {
-    flex-direction: column;
-
+  .main-conteiner {
+    width: 90%;
   }
 
-  .four div img {
-    width: 50%;
-    height: 50%;
-
-  }
-
-  .four div,
-  .two div,
-  .three h6 {
-    text-align: center;
-
+  .mySlides img {
+    width: 30%;
   }
 
   .courses-grid {
@@ -369,6 +355,45 @@ button:hover {
   }
 }
 
+@media (max-width: 770px) {
+  .main-container {
+    width: 90%;
+
+  }
+
+  .responsive-header {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .header {
+    height: 120px;
+  }
+
+  .mySlides img {
+    width: 30%;
+
+  }
+
+  /*
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 38px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  */
+}
+
 @media (max-width: 640px) {
   .courses-grid {
     display: grid;
@@ -376,11 +401,6 @@ button:hover {
     gap: 10px;
     align-content: center;
     justify-content: space-evenly;
-  }
-}
 
-@media (max-width: 768px) {
-  .main-container {
-    width: 90%;
   }
 }
