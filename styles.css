@@ -265,9 +265,37 @@ h4 {
 .footer {
   background-color: #1a1e1f;
   color: #F4F4F4;
+  /* padding-top: 50px;
+  padding-bottom: 50px;
+  */
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.copyright {
+  display: grid;
+gap: 15px;
+}
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  gap:38px;
+}
 
+.contact-img {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .footer a {
@@ -275,7 +303,6 @@ h4 {
   text-decoration: none;
   transition: background-color 0.5s, color 0.5s;
 }
-
 .role:hover {
   color: #c0c0c0;
 }
@@ -307,29 +334,8 @@ button:hover {
   border-color: transparent;
 }
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  flex-wrap: nowrap;
-}
 
-.copyright {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
 
-}
-
-.img {
-  /*display: flex;*/
-}
-
-.footer div {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 
 /* End 'how-to' styles */
 
