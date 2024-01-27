@@ -1,30 +1,45 @@
-let slideIndex = 0;
-showSlides();
+var currentIndex = 0;
+    var totalSlides = document.querySelectorAll('.slide').length;
+    var interval;
 
-function showSlides() {
-    let i;
-    const slides = document.querySelectorAll('.mySlides');
-    const dots = document.querySelectorAll('.dot');
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+    function startCarousel() {
+        interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
     }
 
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
+    function stopCarousel() {
+        clearInterval(interval);
     }
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(' active', '');
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
     }
 
-    slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].className += ' active';
-    
-    setTimeout(showSlides, 2000); // Change slide every 2 seconds
-}
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+        //stopCarousel(); // Stop automatic sliding when manually navigating
+    }
+
+    function updateSlider() {
+        var slidesContainer = document.querySelector('.slides');
+        var slideWidth = document.querySelector('.slide').offsetWidth;
+        slidesContainer.style.transform = 'translateX(' + (-currentIndex * slideWidth) + 'px)';
+
+        // Update active dot
+        var dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    // Start the carousel initially
+    startCarousel();
 
 var openContentId = null;
 
