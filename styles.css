@@ -2,12 +2,10 @@ body {
   background-color: #161616;
   margin: 0;
   padding: 0;
-
 }
 
 .main-conteiner {
   width: 80%;
-  /* Set the desired width of your main container */
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -65,11 +63,12 @@ body {
   color: #00aeef;
 }
 
-/*End Header styles*/
+h1 {
+  color: #F4F4F4;
+  font-size: 28px;
+}
 
-
-
-/* start cover styles */
+/* Cover styles */
 .cover {
   height: 356px;
   background-image: url("pictures/3.webp");
@@ -83,9 +82,9 @@ body {
   align-content: space-around;
 }
 
-/*End Cover styles*/
 
-/* Start Description styles */
+
+/* Description styles */
 .description {
   background-color: rgb(43, 43, 43);
 }
@@ -106,9 +105,7 @@ body {
   color: #c0c0c0;
 }
 
-/* End Description styles */
-
-/* Start Courses Styles */
+/* Courses Styles */
 
 .courses-grid {
   display: grid;
@@ -116,17 +113,24 @@ body {
   gap: 10px;
   align-content: center;
   justify-content: space-evenly;
-
 }
 
 .courses {
   color: #F4F4F4;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .courses a {
   text-decoration: none;
   color: #00aeef;
+  font-weight: bold;
+}
 
+.courses a:hover {
+  text-decoration: none;
+  color: #00afefb9;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .gg-arrow-right {
@@ -150,13 +154,11 @@ body {
   object-fit: cover;
 }
 
-/* End Courses Styles */
-
 /* Start Carousel Styles */
+
 .carousel-container {
   position: relative;
   max-width: 1000px;
-  /* Adjust the maximum width as needed */
   overflow: hidden;
   color: #F4F4F4;
   font-size: 20px;
@@ -168,7 +170,6 @@ body {
 }
 
 .slide {
-
   min-width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -180,7 +181,6 @@ body {
 
 .slide img {
   width: 25%;
-
 }
 
 .controls {
@@ -197,6 +197,10 @@ body {
   cursor: pointer;
   user-select: none;
   color: #fff;
+}
+
+.arrow:hover {
+  color: #c0c0c0;
 }
 
 .dots {
@@ -220,13 +224,11 @@ body {
   background-color: #fff;
 }
 
-/* End 'Carousel' Styles */
-
 /* Starst 'how-to' styles */
 .how-to {
   color: #F4F4F4;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .frequently-asked-questions {
@@ -262,7 +264,6 @@ body {
   cursor: pointer;
   border-bottom: 1px solid #c0c0c063;
   font-size: 20px;
-
 }
 
 ul {
@@ -288,30 +289,7 @@ li.open::before {
   content: '\2193';
 }
 
-/* End 'how-to' styles */
-
-h1 {
-  color: #F4F4F4;
-  text-align: start;
-  line-height: 1.6em;
-  letter-spacing: normal;
-  font-size: 28px;
-}
-
-h3 {
-  color: rgb(244, 244, 244);
-  font-size: 42px;
-}
-
-h4 {
-  margin-top: 0%;
-  color: rgb(244, 244, 244);
-  font-size: 34px;
-  line-height: 1.6em;
-}
-
-/* Start 'footer' styles */
-
+/* footer styles */
 .footer {
   background-color: #1a1e1f;
   color: #F4F4F4;
@@ -385,7 +363,7 @@ button:hover {
   border-color: transparent;
 }
 
-/* End 'how-to' styles */
+
 
 @media (max-width: 950px) {
   .main-conteiner {
@@ -411,6 +389,10 @@ button:hover {
 
   }
 
+  #hover {
+    text-align: center;
+  }
+
   .responsive-header {
     display: grid;
     align-content: center;
@@ -428,20 +410,6 @@ button:hover {
 
   }
 
-  /*
-  .footer-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .contact {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 38px;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  */
 }
 
 @media (max-width: 640px) {
