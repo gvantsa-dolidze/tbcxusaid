@@ -262,10 +262,30 @@ body {
   cursor: pointer;
   border-bottom: 1px solid #c0c0c063;
   font-size: 20px;
+
 }
 
 ul {
   list-style: none;
+  overflow-y: auto;
+}
+
+li {
+  position: relative;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+li::before {
+  content: '\2192';
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  transform: translateY(-50%);
+}
+
+li.open::before {
+  content: '\2193';
 }
 
 /* End 'how-to' styles */
