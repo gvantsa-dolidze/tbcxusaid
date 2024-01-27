@@ -1,54 +1,54 @@
-var currentIndex = 0;
-var totalSlides = document.querySelectorAll('.slide').length;
-var interval;
+let currentIndex = 0;
+const totalSlides = document.querySelectorAll('.slide').length;
+let interval;
 
-function startCarousel() {
+const startCarousel = () => {
   interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
-}
+};
 
-function stopCarousel() {
+const stopCarousel = () => {
   clearInterval(interval);
-}
+};
 
-function nextSlide() {
+const nextSlide = () => {
   currentIndex = (currentIndex + 1) % totalSlides;
   updateSlider();
-}
+};
 
-function prevSlide() {
+const prevSlide = () => {
   currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
   updateSlider();
-}
+};
 
-function goToSlide(index) {
+const goToSlide = (index) => {
   currentIndex = index;
   updateSlider();
-  //stopCarousel(); // Stop automatic sliding when manually navigating
-}
+  // stopCarousel(); // Stop automatic sliding when manually navigating
+};
 
-function updateSlider() {
-  var slidesContainer = document.querySelector('.slides');
-  var slideWidth = document.querySelector('.slide').offsetWidth;
-  slidesContainer.style.transform = 'translateX(' + (-currentIndex * slideWidth) + 'px)';
+const updateSlider = () => {
+  const slidesContainer = document.querySelector('.slides');
+  const slideWidth = document.querySelector('.slide').offsetWidth;
+  slidesContainer.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 
   // Update active dot
-  var dots = document.querySelectorAll('.dot');
+  const dots = document.querySelectorAll('.dot');
   dots.forEach((dot, index) => {
     dot.classList.toggle('active', index === currentIndex);
   });
-}
+};
 
 // Start the carousel initially
 startCarousel();
 
-var openContentId = null;
+let openContentId = null;
 
-function toggleContent(questionNumber) {
-  var contentId = 'content-' + questionNumber;
-  var content = document.getElementById(contentId);
+const toggleContent = (questionNumber) => {
+  const contentId = `content-${questionNumber}`;
+  const content = document.getElementById(contentId);
 
   if (openContentId !== null) {
-    var openContent = document.getElementById(openContentId);
+    const openContent = document.getElementById(openContentId);
     openContent.style.display = 'none';
 
     if (openContentId === contentId) {
@@ -59,14 +59,12 @@ function toggleContent(questionNumber) {
 
   content.style.display = 'block';
   openContentId = contentId;
-}
+};
 
-
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const ul = document.querySelector('ul');
 
-  ul.addEventListener('click', function (event) {
+  ul.addEventListener('click', (event) => {
     const clickedLi = event.target.closest('li');
     if (clickedLi) {
       clickedLi.classList.toggle('open');
