@@ -14,7 +14,7 @@ body {
 /*Header styles*/
 .header {
   display: flex;
-  background-color: #1a1e1f;
+  background-color: rgba(26, 30, 31, 0.96);
   height: 90px;
   position: sticky;
   top: 0px;
@@ -70,6 +70,7 @@ h1 {
 }
 
 /* Cover styles */
+
 .cover {
   height: 356px;
   background-image: url("pictures/3.webp");
@@ -78,12 +79,6 @@ h1 {
   background-position: center;
   padding-top: 20px;
 }
-
-/*.cover h3 {
-  align-content: space-around;
-}
-
-
 
 /* Description styles */
 .description {
@@ -143,7 +138,7 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.39);
   width: 300px;
   height: 414px;
-  border-radius: 3%;
+  border-radius: 2%;
   margin: auto;
   margin-top: 12.5px;
   margin-bottom: 12.5px;
@@ -160,7 +155,7 @@ h1 {
   margin-left: 15px;
 }
 
-/* Start Carousel Styles */
+/* Carousel Styles */
 
 .carousel-container {
   position: relative;
@@ -230,7 +225,7 @@ h1 {
   background-color: #fff;
 }
 
-/* Starst 'how-to' styles */
+/* 'how-to' styles */
 .how-to {
   color: #F4F4F4;
   margin-top: 70px;
@@ -369,9 +364,12 @@ button:hover {
   border-color: transparent;
 }
 
+/* Media Queries */
+
 @media (max-width: 1100px) {
   .courses-grid {
     grid-template-columns: repeat(2, 1fr);
+    
   }
 }
 
