@@ -254,6 +254,9 @@
         </div>
         <!-- CAROUSEL -->
         <section class="carousel" style="background-color:rgb(43, 43, 43);">
+            <div class="controls">
+                <div class="arrow arrow-left" onclick="prevSlide()">&#10092;</div>
+            </div>
             <div class="main-conteiner">
 
                 <div class="carousel-container">
@@ -275,12 +278,6 @@
                             </div>
                         </div>
 
-                        <br><br><br>
-                        <div class="controls">
-                            <div class="arrow arrow-left" onclick="prevSlide()">&#10092;</div>
-                            <div class="arrow arrow-right" onclick="nextSlide()">&#10093;</div>
-                        </div>
-                        <br><br><br>
                         <div class="dots">
                             <div class="dot" onclick="goToSlide(0)"></div>
                             <div class="dot" onclick="goToSlide(1)"></div>
@@ -288,6 +285,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="controls">
+                <div class="arrow arrow-right" onclick="nextSlide()">&#10093;</div>
             </div>
         </section>
 

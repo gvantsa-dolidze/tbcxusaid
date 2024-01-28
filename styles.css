@@ -156,6 +156,11 @@ h1 {
 }
 
 /* Carousel Styles */
+.carousel {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
 
 .carousel-container {
   position: relative;
@@ -168,6 +173,7 @@ h1 {
 .slides {
   display: flex;
   transition: auto;
+  margin-bottom: 150px;
 }
 
 .slide {
@@ -178,6 +184,7 @@ h1 {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: nowrap;
+
 }
 
 .slide img {
@@ -185,12 +192,9 @@ h1 {
 }
 
 .controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   transform: translateY(-50%);
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .arrow {
@@ -267,7 +271,9 @@ h1 {
   font-size: 20px;
 }
 
-#content-1, #content-2, #content-3 {
+#content-1,
+#content-2,
+#content-3 {
   cursor: text;
 }
 
